@@ -1,4 +1,4 @@
-const socket = io('ws://localhost:5500');
+const socket = io('ws://localhost:3000');
 
 function sendMsg(e) {
   /**
