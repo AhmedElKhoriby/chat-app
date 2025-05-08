@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Websockets</title>
+    <title>Chat App</title>
 
     <link href="style.css" rel="stylesheet" />
 
@@ -14,11 +14,41 @@
     <!-- The defer attribute is used to indicate that the script should be executed after the document has been parsed. This means that the script will not block the rendering of the page, and it will be executed in the order it appears in the document. This is particularly useful for scripts that manipulate the DOM or require access to elements that may not be available until the document is fully loaded. -->
   </head>
   <body>
-    <form>
-      <input id="input" placeholder="Type your message here..." />
-      <button>Send</button>
-    </form>
-    <ul id="messages"></ul>
-    <p class="activity"></p>
+    <main>
+      <form class="form-join">
+        <input
+          type="text"
+          id="name"
+          maxlength="8"
+          size="8"
+          placeholder="Your Name"
+          required
+        />
+
+        <input
+          type="text"
+          id="room"
+          size="8"
+          placeholder="Room Name"
+          required
+        />
+        <button id="join" type="submit">Join</button>
+      </form>
+
+      <ul class="chat-display"></ul>
+      <p class="user-list"></p>
+      <p class="room-list"></p>
+      <p class="activity"></p>
+
+      <form class="form-msg">
+        <input
+          type="text"
+          id="message"
+          placeholder="Type your message here..."
+          required
+        />
+        <button type="submit">Send</button>
+      </form>
+    </main>
   </body>
 </html>
